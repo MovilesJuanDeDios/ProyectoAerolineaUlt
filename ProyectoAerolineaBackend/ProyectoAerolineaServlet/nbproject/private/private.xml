@@ -2,18 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaServlet/src/java/cr/ac/una/escinf/proyectoaerolinea/controller/TiqueteServlet.java</file>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaServlet/src/java/cr/ac/una/escinf/proyectoaerolinea/controller/TipoAvionServlet.java</file>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaServlet/web/WEB-INF/web.xml</file>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaServlet/src/java/cr/ac/una/escinf/proyectoaerolinea/controller/AvionServlet.java</file>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaServlet/src/java/cr/ac/una/escinf/proyectoaerolinea/controller/UsuarioServlet.java</file>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaServlet/src/java/cr/ac/una/escinf/proyectoaerolinea/controller/HorarioServlet.java</file>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaServlet/src/java/cr/ac/una/escinf/proyectoaerolinea/controller/LugarServlet.java</file>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaServlet/src/java/cr/ac/una/escinf/proyectoaerolinea/controller/VueloServlet.java</file>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaServlet/src/java/cr/ac/una/escinf/proyectoaerolinea/controller/AsientoServlet.java</file>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaServlet/web/META-INF/context.xml</file>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaServlet/src/java/cr/ac/una/escinf/proyectoaerolinea/controller/RutaServlet.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

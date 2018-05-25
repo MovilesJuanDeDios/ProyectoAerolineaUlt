@@ -22,6 +22,7 @@ import com.google.android.gms.maps.model.LatLngBounds;
 
 import org.json.JSONArray;
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -381,18 +382,18 @@ public class MyProfileActivity extends BaseActivity implements
 
             Usuario usuario = null;
             try {
-                JSONArray items = new JSONArray(jString);
+                JSONObject items = new JSONObject(jString);
                 if (items != null) {
                     for (int i = 0; i < items.length(); i++) {
-                        String nombre = items.getJSONObject(i).getString("nombre");
-                        String apellidos = items.getJSONObject(i).getString("apellidos");
-                        String correo = items.getJSONObject(i).getString("correo");
-                        String fechaNacimiento = items.getJSONObject(i).getString("fechaNacimiento");
-                        String direccion = items.getJSONObject(i).getString("direccion");
-                        String celular = items.getJSONObject(i).getString("celular");
-                        String telefono = items.getJSONObject(i).getString("telefono");
-                        String nomUsuario = items.getJSONObject(i).getString("usuario");
-                        String contrasena = items.getJSONObject(i).getString("contrasena");
+                        String nombre = items.getString("nombre");
+                        String apellidos = items.getString("apellidos");
+                        String correo = items.getString("correo");
+                        String fechaNacimiento = items.getString("fechaNacimiento");
+                        String direccion = items.getString("direccion");
+                        String celular = items.getString("celular");
+                        String telefono = items.getString("telefono");
+                        String nomUsuario = items.getString("usuario");
+                        String contrasena = items.getString("contrasena");
                         //the value of progress is a placeholder here....
                         usuario = new Usuario(nombre, apellidos, correo, fechaNacimiento, direccion,
                                 celular, telefono, nomUsuario, contrasena);
