@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cr.ac.una.escinf.proyectoaerolinea">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDcz57wOelQzIQxsoPWBBod_7x64yEs7Mk" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".activities.SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.MainPageActivity"
+            android:label="@string/title_activity_main_page" />
+        <activity
+            android:name=".activities.LoginActivity"
+            android:label="Inicio de Sesión" />
+        <activity
+            android:name=".activities.RegisterActivity"
+            android:label="Registro" />
+        <activity
+            android:name=".activities.MyProfileActivity"
+            android:label="Mi Perfil" />
+        <activity
+            android:name=".activities.ContactActivity"
+            android:label="Contactenos" />
+        <activity
+            android:name=".activities.AboutUsActivity"
+            android:label="Acerca de Nosotros" />
+        <activity
+            android:name=".activities.BookFlightActivity"
+            android:label="Reserva tu vuelo"/>
+    </application>
+
+</manifest>

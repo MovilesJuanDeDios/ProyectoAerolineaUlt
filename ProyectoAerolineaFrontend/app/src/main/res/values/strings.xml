@@ -1,0 +1,103 @@
+<resources>
+    <string name="app_name">Proyecto Aerolinea</string>
+    <string name="title_activity_main_page"> </string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <!--Textos en general-->
+    <string name="log_in">Iniciar Sesión</string>
+    <string name="register_btn">¿Todavía no eres miembro?\n<u>Regístrate aquí</u></string>
+    <string name="register_title">Registra tus datos</string>
+    <string name="create_account_btn">Crear Cuenta</string>
+    <string name="cancel_btn">Cancelar</string>
+    <string name="update_info_btn">Guardar Cambios</string>
+    <string name="contact_form">Formulario de Contacto</string>
+    <string name="insert_email">Ingrese su correo</string>
+    <string name="insert_comment">Ingrese su comentario aquí</string>
+    <string name="send_comment">Enviar</string>
+    <string name="buscar_vuelos">Buscar Vuelos</string>
+    <string name="about_us">Lo mejor es viajar</string>
+    <string name="about_us_2">
+        <b>Estamos presentes en cada etapa de su viaje\n\n</b>
+
+        Sabemos que planificar un viaje parece complicado.
+        Nos hemos puesto en tu lugar y decidimos usar nuestra experiencia para
+        ayudarte a realizar el viaje de tus sueños…
+    </string>
+
+    <string name="about_us_3">
+        <b>Estamos presentes en cada etapa de su viaje\n\n</b>
+
+        Sabemos que planificar un viaje parece complicado.
+        Nos hemos puesto en tu lugar y decidimos usar nuestra experiencia para
+        ayudarte a realizar el viaje de tus sueños…
+    </string>
+
+
+    <!--Iconos de la appbar-->
+    <string name="login_icon">Login</string>
+    <string name="logout_icon">Logout</string>
+
+    <!--Opciones del menu de navegacion-->
+    <string name="opcion_inicio">Inicio</string>
+    <string name="opcion_perfil">Mi Perfil</string>
+    <string name="opcion_vuelos">Buscar Vuelos</string>
+    <string name="opcion_contactenos">Contáctenos</string>
+    <string name="opcion_acerca_de">Acerca de Nosotros</string>
+
+    <!--Hints para los datos del usuario-->
+    <string name="username_hint">Usuario</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="confirm_password_hint">Confirmar contraseña</string>
+    <string name="name_hint">Nombre</string>
+    <string name="last_name_hint">Apellidos</string>
+    <string name="email_hint">Correo electrónico</string>
+    <string name="birthdate_hint">Fecha de nacimiento</string>
+    <string name="address_hint">Dirección</string>
+    <string name="cellphone_hint">Celular</string>
+    <string name="phone_hint">Teléfono</string>
+
+    <!--Errores en el login o registro-->
+    <string name="empty_name">Por favor ingrese su nombre</string>
+    <string name="empty_lastname">Por favor ingrese su apellido</string>
+    <string name="empty_email">Por favor ingrese su correo</string>
+    <string name="empty_birthdate">Por favor ingrese su fecha de nacimiento</string>
+    <string name="empty_address">Por favor ingrese su dirección</string>
+    <string name="empty_phone">Por favor ingrese su teléfono</string>
+    <string name="empty_cellphone">Por favor ingrese su celular</string>
+    <string name="empty_username">Por favor ingrese un nombre de usuario</string>
+    <string name="empty_password">Por favor ingrese una contraseña</string>
+    <string name="conf_password">Por favor confirme su contraseña</string>
+    <string name="dif_password">Debe ingresar la misma contraseña</string>
+    <string name="existing_username">Ese nombre de usuario ya existe</string>
+    <string name="password_length_error">La contraseña debe tener entre 4 y 16 caracteres</string>
+    <string name="username_length_error">El usuario debe tener entre 4 y 16 caracteres</string>
+    <string name="error_incorrect_password">Contraseña incorrecta</string>
+    <string name="error_incorrect_username">Usuario incorrecto</string>
+    <string name="error_incorrect_email">Correo no válido</string>
+    <string name="user_not_found">Usuario o contraseña inválidos</string>
+    <string name="empty_comment_error">Por favor ingrese su comentario</string>
+
+    <!--SharedPreferences-->
+    <string name="preference_file_key">MyPrefs</string>
+    <string name="pref_username">usernameKey</string>
+
+    <string name="base_url">http://10.0.2.2:8080/ProyectoAerolineaServlet/</string>
+
+
+    <string-array name="paises_array">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
+
+</resources>

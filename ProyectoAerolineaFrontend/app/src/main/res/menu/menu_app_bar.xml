@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/icon_login"
+        android:icon="@drawable/ic_action_login"
+        android:title="@string/login_icon"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/icon_logout"
+        android:icon="@drawable/ic_action_logout"
+        android:title="@string/logout_icon"
+        android:visible="false"
+        app:showAsAction="ifRoom"/>
+
+</menu>

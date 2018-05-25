@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/item_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/opcion_inicio" />
+        <item
+            android:id="@+id/item_myProfile"
+            android:icon="@drawable/ic_person_black_2_24dp"
+            android:title="@string/opcion_perfil" />
+        <item
+            android:id="@+id/item_flight"
+            android:icon="@drawable/ic_flight_black_24dp"
+            android:title="@string/opcion_vuelos" />
+    </group>
+
+    <group
+        android:id="@+id/group2"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/item_about_us"
+            android:icon="@drawable/ic_history"
+            android:title="@string/opcion_acerca_de" />
+        <item
+            android:id="@+id/item_contact_us"
+            android:icon="@drawable/ic_contact"
+            android:title="@string/opcion_contactenos" />
+
+    </group>
+
+</menu>
