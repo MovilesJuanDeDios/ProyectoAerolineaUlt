@@ -119,14 +119,14 @@
 
 
     <string-array name="paises_array">
-        <item>Mercury</item>
-        <item>Venus</item>
-        <item>Earth</item>
-        <item>Mars</item>
-        <item>Jupiter</item>
-        <item>Saturn</item>
-        <item>Uranus</item>
-        <item>Neptune</item>
+        <item>Santiago</item>
+        <item>Bogota</item>
+        <item>Ottawa</item>
+        <item>Ciudad de Mexico</item>
+        <item>Caracas</item>
+        <item>Buenos Aires</item>
+        <item>Nueva York</item>
+        <item>Rio de Janeiro</item>
     </string-array>
 
 </resources>
