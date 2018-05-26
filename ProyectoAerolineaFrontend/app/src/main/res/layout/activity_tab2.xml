@@ -1,14 +1,621 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/text2"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center_vertical|center_horizontal"
-        android:text="Lengüeta 2"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="26dp"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/cabina"
+                    android:text="Cabina del avion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tint="@color/colorPrimaryDark"
+                    app:srcCompat="@android:drawable/btn_star" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@android:drawable/list_selector_background" />
+
+                <RelativeLayout
+                    android:layout_width="281dp"
+                    android:layout_height="585dp"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="52dp"
+                    tools:layout_editor_absoluteY="0dp">
+
+                    <ImageButton
+                        android:id="@+id/seat1"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:tint="@color/green"
+                        app:srcCompat="@drawable/ic_seat"
+                        tools:ignore="VectorDrawableCompat" />" />
+
+                    <ImageButton
+                        android:id="@+id/seat2"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/seat1"
+                        android:tint="@color/green"
+                        app:srcCompat="@drawable/ic_seat"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageButton
+                        android:id="@+id/seat3"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/seat2"
+                        android:tint="@color/green"
+                        app:srcCompat="@drawable/ic_seat"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageButton
+                        android:id="@+id/seat4"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_below="@+id/seat3"
+                        android:tint="@color/green"
+                        app:srcCompat="@drawable/ic_seat"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageButton
+                        android:id="@+id/seat5"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_below="@+id/seat4"
+                        android:tint="@color/green"
+                        app:srcCompat="@drawable/ic_seat"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageButton
+                        android:id="@+id/seat6"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_below="@+id/seat5"
+                        android:tint="@color/green"
+                        app:srcCompat="@drawable/ic_seat"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageButton
+                        android:id="@+id/seat7"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_below="@+id/seat6"
+                        android:tint="@color/green"
+                        app:srcCompat="@drawable/ic_seat"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageButton
+                        android:id="@+id/seat8"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_below="@+id/seat7"
+                        android:tint="@color/green"
+                        app:srcCompat="@drawable/ic_seat"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageButton
+                        android:id="@+id/seat9"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_below="@+id/seat8"
+                        android:tint="@color/green"
+                        app:srcCompat="@drawable/ic_seat"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageButton
+                        android:id="@+id/seat10"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_above="@+id/seat2"
+                        android:layout_toEndOf="@+id/seat1"
+                        android:layout_toRightOf="@+id/seat1"
+                        android:tint="@color/green"
+                        app:srcCompat="@drawable/ic_seat"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageButton
+                        android:id="@+id/seat11"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_above="@+id/seat3"
+                        android:layout_toEndOf="@+id/seat2"
+                        android:layout_toRightOf="@+id/seat2"
+                        android:tint="@color/green"
+                        app:srcCompat="@drawable/ic_seat"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageButton
+                        android:id="@+id/seat12"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_above="@+id/seat4"
+                        android:layout_toEndOf="@+id/seat3"
+                        android:layout_toRightOf="@+id/seat3"
+                        android:tint="@color/green"
+                        app:srcCompat="@drawable/ic_seat"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageButton
+                        android:id="@+id/seat13"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_above="@+id/seat5"
+                        android:layout_toEndOf="@+id/seat4"
+                        android:layout_toRightOf="@+id/seat4"
+                        android:tint="@color/green"
+                        app:srcCompat="@drawable/ic_seat"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageButton
+                        android:id="@+id/seat14"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_above="@+id/seat6"
+                        android:layout_toEndOf="@+id/seat5"
+                        android:layout_toRightOf="@+id/seat5"
+                        android:tint="@color/green"
+                        app:srcCompat="@drawable/ic_seat"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageButton
+                        android:id="@+id/seat15"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_above="@+id/seat7"
+                        android:layout_toEndOf="@+id/seat6"
+                        android:layout_toRightOf="@+id/seat6"
+                        android:tint="@color/green"
+                        app:srcCompat="@drawable/ic_seat"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageButton
+                        android:id="@+id/seat16"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_below="@+id/seat15"
+                        android:layout_toEndOf="@+id/seat6"
+                        android:layout_toRightOf="@+id/seat6"
+                        android:tint="@color/green"
+                        app:srcCompat="@drawable/ic_seat"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageButton
+                        android:id="@+id/seat17"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_above="@+id/seat9"
+                        android:layout_toEndOf="@+id/seat8"
+                        android:layout_toRightOf="@+id/seat8"
+                        android:tint="@color/green"
+                        app:srcCompat="@drawable/ic_seat"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageButton
+                        android:id="@+id/seat18"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_alignBottom="@+id/seat9"
+                        android:layout_toEndOf="@+id/seat9"
+                        android:layout_toRightOf="@+id/seat9"
+                        android:tint="@color/green"
+                        app:srcCompat="@drawable/ic_seat"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageButton
+                        android:id="@+id/stand1"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_above="@+id/seat11"
+                        android:layout_toEndOf="@+id/seat10"
+                        android:layout_toRightOf="@+id/seat10"
+                        android:clickable="false"
+                        android:tint="@color/yellow"
+                        app:srcCompat="@android:drawable/ic_dialog_dialer" />
+
+                    <ImageButton
+                        android:id="@+id/stand2"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_above="@+id/seat12"
+                        android:layout_toEndOf="@+id/seat11"
+                        android:layout_toRightOf="@+id/seat11"
+                        android:clickable="false"
+                        android:tint="@color/yellow"
+                        app:srcCompat="@android:drawable/ic_dialog_dialer" />
+
+                    <ImageButton
+                        android:id="@+id/stand3"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_above="@+id/seat13"
+                        android:layout_toEndOf="@+id/seat12"
+                        android:layout_toRightOf="@+id/seat12"
+                        android:clickable="false"
+                        android:tint="@color/yellow"
+                        app:srcCompat="@android:drawable/ic_dialog_dialer" />
+
+                    <ImageButton
+                        android:id="@+id/stand4"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_above="@+id/seat14"
+                        android:layout_toEndOf="@+id/seat13"
+                        android:layout_toRightOf="@+id/seat13"
+                        android:clickable="false"
+                        android:tint="@color/yellow"
+                        app:srcCompat="@android:drawable/ic_dialog_dialer" />
+
+                    <ImageButton
+                        android:id="@+id/stand5"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_above="@+id/seat15"
+                        android:layout_alignEnd="@+id/stand4"
+                        android:layout_alignRight="@+id/stand4"
+                        android:clickable="false"
+                        android:tint="@color/yellow"
+                        app:srcCompat="@android:drawable/ic_dialog_dialer" />
+
+                    <ImageButton
+                        android:id="@+id/stand6"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_above="@+id/seat16"
+                        android:layout_toEndOf="@+id/seat15"
+                        android:layout_toRightOf="@+id/seat15"
+                        android:clickable="false"
+                        android:tint="@color/yellow"
+                        app:srcCompat="@android:drawable/ic_dialog_dialer" />
+
+                    <ImageButton
+                        android:id="@+id/stand7"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_above="@+id/seat17"
+                        android:layout_toEndOf="@+id/seat16"
+                        android:layout_toRightOf="@+id/seat16"
+                        android:clickable="false"
+                        android:tint="@color/yellow"
+                        app:srcCompat="@android:drawable/ic_dialog_dialer" />
+
+                    <ImageButton
+                        android:id="@+id/stand8"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_below="@+id/stand7"
+                        android:layout_toEndOf="@+id/seat16"
+                        android:layout_toRightOf="@+id/seat16"
+                        android:clickable="false"
+                        android:tint="@color/yellow"
+                        app:srcCompat="@android:drawable/ic_dialog_dialer" />
+
+                    <ImageButton
+                        android:id="@+id/stand9"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_alignBottom="@+id/seat18"
+                        android:layout_toEndOf="@+id/seat18"
+                        android:layout_toRightOf="@+id/seat18"
+                        android:clickable="false"
+                        android:tint="@color/yellow"
+                        app:srcCompat="@android:drawable/ic_dialog_dialer" />
+
+                    <ImageButton
+                        android:id="@+id/seat19"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_above="@+id/stand3"
+                        android:layout_toEndOf="@+id/stand2"
+                        android:layout_toRightOf="@+id/stand2"
+                        android:tint="@color/green"
+                        app:srcCompat="@drawable/ic_seat"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageButton
+                        android:id="@+id/seat20"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_above="@+id/stand4"
+                        android:layout_toEndOf="@+id/stand3"
+                        android:layout_toRightOf="@+id/stand3"
+                        android:tint="@color/green"
+                        app:srcCompat="@drawable/ic_seat"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageButton
+                        android:id="@+id/seat21"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_above="@+id/stand5"
+                        android:layout_toEndOf="@+id/stand4"
+                        android:layout_toRightOf="@+id/stand4"
+                        android:tint="@color/green"
+                        app:srcCompat="@drawable/ic_seat"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageButton
+                        android:id="@+id/seat22"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_below="@+id/stand6"
+                        android:layout_toEndOf="@+id/stand6"
+                        android:layout_toRightOf="@+id/stand6"
+                        android:tint="@color/green"
+                        app:srcCompat="@drawable/ic_seat"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageButton
+                        android:id="@+id/seat23"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_below="@+id/stand7"
+                        android:layout_toEndOf="@+id/stand7"
+                        android:layout_toRightOf="@+id/stand7"
+                        android:tint="@color/green"
+                        app:srcCompat="@drawable/ic_seat"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageButton
+                        android:id="@+id/seat24"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_alignTop="@+id/seat19"
+                        android:layout_toEndOf="@+id/seat19"
+                        android:layout_toRightOf="@+id/seat19"
+                        android:tint="@color/green"
+                        app:srcCompat="@drawable/ic_seat"
+                        tools:ignore="VectorDrawableCompat" />" />
+
+                    <ImageButton
+                        android:id="@+id/seat25"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_alignTop="@+id/seat20"
+                        android:layout_toEndOf="@+id/seat20"
+                        android:layout_toRightOf="@+id/seat20"
+                        android:tint="@color/green"
+                        app:srcCompat="@drawable/ic_seat"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageButton
+                        android:id="@+id/seat26"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_alignBottom="@+id/seat21"
+                        android:layout_toEndOf="@+id/seat21"
+                        android:layout_toRightOf="@+id/seat21"
+                        android:tint="@color/green"
+                        app:srcCompat="@drawable/ic_seat"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageButton
+                        android:id="@+id/seat27"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_alignTop="@+id/seat22"
+                        android:layout_toEndOf="@+id/seat22"
+                        android:layout_toRightOf="@+id/seat22"
+                        android:tint="@color/green"
+                        app:srcCompat="@drawable/ic_seat"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageButton
+                        android:id="@+id/seat28"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_alignTop="@+id/seat23"
+                        android:layout_toEndOf="@+id/seat23"
+                        android:layout_toRightOf="@+id/seat23"
+                        android:tint="@color/green"
+                        app:srcCompat="@drawable/ic_seat"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageButton
+                        android:id="@+id/seat29"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/seat9"
+                        android:tint="@color/green"
+                        app:srcCompat="@drawable/ic_seat"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageButton
+                        android:id="@+id/seat30"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_below="@+id/seat9"
+                        android:layout_toEndOf="@+id/seat29"
+                        android:layout_toRightOf="@+id/seat29"
+                        android:tint="@color/green"
+                        app:srcCompat="@drawable/ic_seat"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageButton
+                        android:id="@+id/seat31"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_below="@+id/stand9"
+                        android:layout_toEndOf="@+id/stand9"
+                        android:layout_toRightOf="@+id/stand9"
+                        android:tint="@color/green"
+                        app:srcCompat="@drawable/ic_seat"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageButton
+                        android:id="@+id/seat32"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_below="@+id/seat33"
+                        android:layout_toEndOf="@+id/seat31"
+                        android:layout_toRightOf="@+id/seat31"
+                        android:tint="@color/green"
+                        app:srcCompat="@drawable/ic_seat"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageButton
+                        android:id="@+id/stand14"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_below="@+id/stand9"
+                        android:layout_toEndOf="@+id/seat18"
+                        android:layout_toRightOf="@+id/seat18"
+                        android:tint="@color/yellow"
+                        app:srcCompat="@android:drawable/ic_dialog_dialer"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageButton
+                        android:id="@+id/seat40"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/stand1"
+                        android:layout_toRightOf="@+id/stand1"
+                        android:tint="@color/green"
+                        app:srcCompat="@drawable/ic_seat"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageButton
+                        android:id="@+id/seat39"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/seat40"
+                        android:layout_toRightOf="@+id/seat40"
+                        android:tint="@color/green"
+                        app:srcCompat="@drawable/ic_seat"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageButton
+                        android:id="@+id/seat33"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_below="@+id/stand8"
+                        android:layout_toLeftOf="@+id/seat28"
+                        android:layout_toStartOf="@+id/seat28"
+                        android:tint="@color/green"
+                        app:srcCompat="@drawable/ic_seat"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageButton
+                        android:id="@+id/seat34"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_alignBottom="@+id/seat33"
+                        android:layout_toEndOf="@+id/seat23"
+                        android:layout_toRightOf="@+id/seat23"
+                        android:tint="@color/green"
+                        app:srcCompat="@drawable/ic_seat"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageButton
+                        android:id="@+id/seat35"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_below="@+id/seat21"
+                        android:layout_toEndOf="@+id/stand5"
+                        android:layout_toRightOf="@+id/stand5"
+                        android:tint="@color/green"
+                        app:srcCompat="@drawable/ic_seat"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageButton
+                        android:id="@+id/seat36"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_alignTop="@+id/seat35"
+                        android:layout_toEndOf="@+id/seat21"
+                        android:layout_toRightOf="@+id/seat21"
+                        app:srcCompat="@drawable/ic_seat"
+                        android:tint="@color/green"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageButton
+                        android:id="@+id/seat37"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_above="@+id/stand7"
+                        android:layout_toEndOf="@+id/stand6"
+                        android:layout_toRightOf="@+id/stand6"
+                        app:srcCompat="@drawable/ic_seat"
+                        android:tint="@color/green"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ImageButton
+                        android:id="@+id/seat38"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_alignTop="@+id/seat37"
+                        android:layout_toEndOf="@+id/seat22"
+                        android:layout_toRightOf="@+id/seat22"
+                        app:srcCompat="@drawable/ic_seat"
+                        android:tint="@color/green"
+                        tools:ignore="VectorDrawableCompat" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@android:drawable/list_selector_background" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/baños"
+                    android:text="baños del avion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tint="@color/colorPrimaryDark"
+                    app:srcCompat="@android:drawable/btn_star" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
 </LinearLayout>
