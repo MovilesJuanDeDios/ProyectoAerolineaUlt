@@ -111,6 +111,8 @@ public class RegisterActivity extends BaseActivity
 
     private StringBuilder URL = new StringBuilder();
 
+    private boolean valid;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -239,7 +241,7 @@ public class RegisterActivity extends BaseActivity
         lastname = lastname_editText.getText().toString();
         name = name_editText.getText().toString();
 
-        boolean valid = true;
+        valid = true;
 
         // Check for a valid password confirm
         if (confPassword.isEmpty()) {
@@ -418,18 +420,18 @@ public class RegisterActivity extends BaseActivity
 
             Usuario usuario = null;
             try {
-                JSONArray items = new JSONArray(jString);
+                JSONObject items = new JSONObject(jString);
                 if (items != null) {
                     for (int i = 0; i < items.length(); i++) {
-                        String nombre = items.getJSONObject(i).getString("nombre");
-                        String apellidos = items.getJSONObject(i).getString("apellidos");
-                        String correo = items.getJSONObject(i).getString("correo");
-                        String fechaNacimiento = items.getJSONObject(i).getString("fechaNacimiento");
-                        String direccion = items.getJSONObject(i).getString("direccion");
-                        String celular = items.getJSONObject(i).getString("celular");
-                        String telefono = items.getJSONObject(i).getString("telefono");
-                        String nomUsuario = items.getJSONObject(i).getString("usuario");
-                        String contrasena = items.getJSONObject(i).getString("contrasena");
+                        String nombre = items.getString("nombre");
+                        String apellidos = items.getString("apellidos");
+                        String correo = items.getString("correo");
+                        String fechaNacimiento = items.getString("fechaNacimiento");
+                        String direccion = items.getString("direccion");
+                        String celular = items.getString("celular");
+                        String telefono = items.getString("telefono");
+                        String nomUsuario = items.getString("usuario");
+                        String contrasena = items.getString("contrasena");
                         //the value of progress is a placeholder here....
                         usuario = new Usuario(nombre, apellidos, correo, fechaNacimiento, direccion,
                                 celular, telefono, nomUsuario, contrasena);
@@ -445,11 +447,12 @@ public class RegisterActivity extends BaseActivity
 
         @Override
         protected void onPostExecute(Usuario usuario) {
-            if (usuario == null) {
-                username_input.setError(getString(R.string.password_length_error));
+            if (usuario != null) {
+                username_input.setError("Ese usuario ya existe");
                 username_input.requestFocus();
+                valid = false;
             } else {
-
+                username_input.setError(null);
             }
         }
     }

@@ -36,12 +36,17 @@ public class BookFlightActivity extends BaseActivity implements DatePickerDialog
         tabHost.setup(this, getSupportFragmentManager(),android.R.id.tabcontent);
 
 
-        tabHost.addTab(tabHost.newTabSpec("tab1").setIndicator("Lengüeta 1"),
+        tabHost.addTab(tabHost.newTabSpec("tab1").setIndicator("Busca Vuelo"),
                 Tab1.class, null);
-        tabHost.addTab(tabHost.newTabSpec("tab2").setIndicator("Lengüeta 2"),
+        tabHost.addTab(tabHost.newTabSpec("tab2").setIndicator("Selecciona tu asiento"),
                 Tab2.class, null);
-        tabHost.addTab(tabHost.newTabSpec("tab3").setIndicator("Lengüeta 3"),
+        tabHost.addTab(tabHost.newTabSpec("tab3").setIndicator("Check Out"),
                 Tab3.class, null);
+
+        /*tabHost.getTabWidget().getChildTabViewAt(1).setEnabled(false);
+        tabHost.getTabWidget().getChildTabViewAt(2).setEnabled(false);*/
+
+
 
         LayoutInflater factory = getLayoutInflater();
         View textView = factory.inflate(R.layout.activity_tab1, null);

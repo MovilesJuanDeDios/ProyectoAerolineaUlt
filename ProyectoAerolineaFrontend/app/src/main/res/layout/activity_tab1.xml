@@ -184,18 +184,66 @@
 
         </LinearLayout>
 
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
             android:layout_marginTop="20dp">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Cantidad de pasajeros:"
                 android:textSize="16sp"
-                android:textColor="@color/colorPrimary"/>
+                android:layout_weight="1"
+                android:textColor="@color/colorPrimary" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.05"/>
+
+            <android.support.design.widget.TextInputLayout
+                app:hintEnabled="false"
+                android:id="@+id/cantidad_pasajeros_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <EditText
+                    android:id="@+id/cantidad_pasajeros_editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@drawable/edit_text_style_afterlife"
+                    android:inputType="number"
+                    android:focusable="false"
+                    android:textSize="16sp"
+                    android:drawablePadding="4dip"
+                    android:paddingLeft="4dip"
+                    android:paddingRight="10dip"
+                    android:singleLine="true"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/next_tab1"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@color/colorAccent"
+                android:text="Siguiente"
+                android:textColor="#FAFAFA"
+                android:layout_marginTop="20dp"/>
 
         </LinearLayout>
 

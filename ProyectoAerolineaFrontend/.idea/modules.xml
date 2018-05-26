@@ -3,11 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ProyectoAerolineaFrontend.iml" filepath="$PROJECT_DIR$/ProyectoAerolineaFrontend.iml" />
-      <module fileurl="file://C:\Users\casca\Documents\GitHub\ProyectoAerolineaUlt\ProyectoAerolineaFrontend\ProyectoAerolineaFrontend.iml" filepath="C:\Users\casca\Documents\GitHub\ProyectoAerolineaUlt\ProyectoAerolineaFrontend\ProyectoAerolineaFrontend.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\Users\casca\Documents\GitHub\ProyectoAerolineaUlt\ProyectoAerolineaFrontend\app\app.iml" filepath="C:\Users\casca\Documents\GitHub\ProyectoAerolineaUlt\ProyectoAerolineaFrontend\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/bannerslider/bannerslider.iml" filepath="$PROJECT_DIR$/bannerslider/bannerslider.iml" />
-      <module fileurl="file://C:\Users\casca\Documents\GitHub\ProyectoAerolineaUlt\ProyectoAerolineaFrontend\bannerslider\bannerslider.iml" filepath="C:\Users\casca\Documents\GitHub\ProyectoAerolineaUlt\ProyectoAerolineaFrontend\bannerslider\bannerslider.iml" />
     </modules>
   </component>
 </project>

@@ -9,9 +9,9 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="26dp"
-        tools:ignore="MissingConstraints">
+        tools:layout_editor_absoluteY="26dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -562,8 +562,8 @@
                         android:layout_alignTop="@+id/seat35"
                         android:layout_toEndOf="@+id/seat21"
                         android:layout_toRightOf="@+id/seat21"
-                        app:srcCompat="@drawable/ic_seat"
                         android:tint="@color/green"
+                        app:srcCompat="@drawable/ic_seat"
                         tools:ignore="VectorDrawableCompat" />
 
                     <ImageButton
@@ -573,8 +573,8 @@
                         android:layout_above="@+id/stand7"
                         android:layout_toEndOf="@+id/stand6"
                         android:layout_toRightOf="@+id/stand6"
-                        app:srcCompat="@drawable/ic_seat"
                         android:tint="@color/green"
+                        app:srcCompat="@drawable/ic_seat"
                         tools:ignore="VectorDrawableCompat" />
 
                     <ImageButton
@@ -584,8 +584,8 @@
                         android:layout_alignTop="@+id/seat37"
                         android:layout_toEndOf="@+id/seat22"
                         android:layout_toRightOf="@+id/seat22"
-                        app:srcCompat="@drawable/ic_seat"
                         android:tint="@color/green"
+                        app:srcCompat="@drawable/ic_seat"
                         tools:ignore="VectorDrawableCompat" />
 
                 </RelativeLayout>
@@ -598,8 +598,43 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/next_tab2"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorAccent"
+                    android:text="Siguiente"
+                    android:textColor="#FAFAFA" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"/>
+
+                <Button
+                    android:id="@+id/prev_tab2"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:background="@color/gray_color"
+                    android:text="Atras"
+                    android:textColor="#FAFAFA" />
+
+            </LinearLayout>
+
 
         </LinearLayout>
+
 
     </ScrollView>
 

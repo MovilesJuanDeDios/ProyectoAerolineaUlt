@@ -3,6 +3,7 @@ package cr.ac.una.escinf.proyectoaerolinea.activities;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.util.Log;
@@ -13,10 +14,23 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.URLEncoder;
+
 import butterknife.ButterKnife;
 import butterknife.BindView;
 
 import cr.ac.una.escinf.proyectoaerolinea.R;
+import cr.ac.una.escinf.proyectoaerolinea.models.Usuario;
 import cr.ac.una.escinf.proyectoaerolinea.utils.SharedPref;
 
 
@@ -36,6 +50,10 @@ public class LoginActivity extends BaseActivity {
 
     String username;
     String password;
+
+   private boolean valid;
+
+    private StringBuilder URL = new StringBuilder();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -133,7 +151,7 @@ public class LoginActivity extends BaseActivity {
         username = login_username_editText.getText().toString();
         password = login_password_editText.getText().toString();
 
-        boolean valid = true;
+        valid = true;
 
         // Check for a valid password
         if (password.isEmpty()) {
@@ -153,18 +171,115 @@ public class LoginActivity extends BaseActivity {
             username_input.setError(null);
         }
 
-       /* if (!username.isEmpty() && !password.isEmpty()) {
-            if (!usuarioDAO.searchUser(username, password)) {
-                password_input.setError(getString(R.string.user_not_found));
-                username_input.setError(getString(R.string.user_not_found));
-                valid = false;
-            } else {
-                password_input.setError(null);
-                username_input.setError(null);
-            }
-        }*/
+        try {
+            URL.append(getResources().getString(R.string.base_url))
+                    .append("UsuarioServlet?accion=buscar")
+                    .append("&usuario=").append(URLEncoder.encode(username, "UTF-8"));
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+
+        GetUserConnection con = new GetUserConnection();
+        con.execute(URL.toString(), "GET");
 
         return valid;
 
+    }
+
+    public class GetUserConnection extends AsyncTask<String, String, Usuario> {
+
+        @Override
+        protected Usuario doInBackground(String... params) {
+            Usuario usuario = null;
+            URL url;
+            HttpURLConnection urlConnection = null;
+
+            try {
+                url = new URL(params[0]);
+                urlConnection = (HttpURLConnection) url.openConnection();
+                urlConnection.setRequestMethod("GET");
+
+                int responseCode = urlConnection.getResponseCode();
+                String responseMessage = urlConnection.getResponseMessage();
+
+                if (responseCode == HttpURLConnection.HTTP_OK) {
+                    String responseString = readStream(urlConnection.getInputStream());
+                    Log.v("User-Response", responseString);
+                    usuario = parseData(responseString);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                if (urlConnection != null)
+                    urlConnection.disconnect();
+            }
+
+            return usuario;
+        }
+
+        private String readStream(InputStream in) {
+            BufferedReader reader = null;
+            StringBuffer response = new StringBuffer();
+
+            try {
+                reader = new BufferedReader(new InputStreamReader(in));
+                String line = "";
+                while ((line = reader.readLine()) != null) {
+                    response.append(line);
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+                if (reader != null) {
+                    try {
+                        reader.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+            return response.toString();
+        }
+
+        private Usuario parseData(String jString) {
+
+            Usuario usuario = null;
+            try {
+                JSONObject items = new JSONObject(jString);
+                if (items != null) {
+                    for (int i = 0; i < items.length(); i++) {
+                        String nombre = items.getString("nombre");
+                        String apellidos = items.getString("apellidos");
+                        String correo = items.getString("correo");
+                        String fechaNacimiento = items.getString("fechaNacimiento");
+                        String direccion = items.getString("direccion");
+                        String celular = items.getString("celular");
+                        String telefono = items.getString("telefono");
+                        String nomUsuario = items.getString("usuario");
+                        String contrasena = items.getString("contrasena");
+                        //the value of progress is a placeholder here....
+                        usuario = new Usuario(nombre, apellidos, correo, fechaNacimiento, direccion,
+                                celular, telefono, nomUsuario, contrasena);
+                    }
+                }
+            } catch (JSONException e) {
+                Log.e("User", "unexpected JSON exception", e);
+            }
+
+            return usuario;
+        }
+
+        @Override
+        protected void onPostExecute(Usuario usuario) {
+            if (usuario != null) {
+                if (!usuario.getContrasena().equals(password)) {
+                    username_input.setError("Usuario no encotrado");
+                    username_input.requestFocus();
+                    valid = false;
+                }
+            } else {
+                username_input.setError(null);
+            }
+        }
     }
 }
