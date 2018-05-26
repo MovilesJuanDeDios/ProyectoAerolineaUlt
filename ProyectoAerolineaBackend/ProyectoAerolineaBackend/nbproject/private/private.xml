@@ -2,38 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaBackend/src/cr/ac/una/escinf/proyectoaerolinea/ProyectoAerolinea.java</file>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaBackend/src/cr/ac/una/escinf/proyectoaerolinea/models/Ruta.java</file>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaBackend/src/cr/ac/una/escinf/proyectoaerolinea/data/service/ServicioHorario.java</file>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaBackend/src/cr/ac/una/escinf/proyectoaerolinea/data/service/GlobalException.java</file>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaBackend/src/cr/ac/una/escinf/proyectoaerolinea/data/service/ServicioAvion.java</file>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaBackend/src/cr/ac/una/escinf/proyectoaerolinea/models/Asiento.java</file>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaBackend/src/cr/ac/una/escinf/proyectoaerolinea/data/3_Aviones.sql</file>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaBackend/src/cr/ac/una/escinf/proyectoaerolinea/data/4_Lugares.sql</file>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaBackend/src/cr/ac/una/escinf/proyectoaerolinea/models/Lugar.java</file>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaBackend/src/cr/ac/una/escinf/proyectoaerolinea/data/1_Usuarios.sql</file>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaBackend/src/cr/ac/una/escinf/proyectoaerolinea/data/5_Rutas.sql</file>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaBackend/src/cr/ac/una/escinf/proyectoaerolinea/data/Drops.sql</file>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaBackend/src/cr/ac/una/escinf/proyectoaerolinea/data/7_Vuelos.sql</file>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaBackend/src/cr/ac/una/escinf/proyectoaerolinea/data/service/ServicioTiquete.java</file>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaBackend/src/cr/ac/una/escinf/proyectoaerolinea/models/Vuelo.java</file>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaBackend/src/cr/ac/una/escinf/proyectoaerolinea/data/service/ServicioRuta.java</file>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaBackend/src/cr/ac/una/escinf/proyectoaerolinea/data/service/ServicioVuelo.java</file>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaBackend/src/cr/ac/una/escinf/proyectoaerolinea/models/Tiquete.java</file>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaBackend/src/cr/ac/una/escinf/proyectoaerolinea/models/Avion.java</file>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaBackend/src/cr/ac/una/escinf/proyectoaerolinea/data/service/ServicioLugar.java</file>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaBackend/src/cr/ac/una/escinf/proyectoaerolinea/data/service/Servicio.java</file>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaBackend/src/cr/ac/una/escinf/proyectoaerolinea/models/Usuario.java</file>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaBackend/src/cr/ac/una/escinf/proyectoaerolinea/models/Horario.java</file>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaBackend/src/cr/ac/una/escinf/proyectoaerolinea/data/8_Asientos.sql</file>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaBackend/src/cr/ac/una/escinf/proyectoaerolinea/data/service/ServicioAsiento.java</file>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaBackend/src/cr/ac/una/escinf/proyectoaerolinea/data/6_Horarios.sql</file>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaBackend/src/cr/ac/una/escinf/proyectoaerolinea/models/TipoAvion.java</file>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaBackend/src/cr/ac/una/escinf/proyectoaerolinea/data/service/ServicioTipoAvion.java</file>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaBackend/src/cr/ac/una/escinf/proyectoaerolinea/data/2_TipoAviones.sql</file>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaBackend/src/cr/ac/una/escinf/proyectoaerolinea/data/service/ServicioUsuario.java</file>
-            <file>file:/C:/Users/jodre/Documents/GitHub/ProyectoAerolinea/ProyectoAerolineaBackend/ProyectoAerolineaBackend/src/cr/ac/una/escinf/proyectoaerolinea/data/9_Tiquetes.sql</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

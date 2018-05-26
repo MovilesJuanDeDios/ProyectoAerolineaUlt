@@ -5,8 +5,13 @@
  */
 package cr.ac.una.escinf.proyectoaerolinea.controller;
 
+import com.google.gson.Gson;
+import cr.ac.una.escinf.proyectoaerolinea.data.service.ServicioHorario;
+import cr.ac.una.escinf.proyectoaerolinea.models.Horario;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -34,6 +39,65 @@ public class HorarioServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
+            String json;
+           
+            //Se crea el objeto
+            Horario horario = new Horario();
+                 
+            ServicioHorario sh = new ServicioHorario();
+            
+            Thread.sleep(1000);
+            
+            String accion = request.getParameter("accion");
+            
+            switch (accion) {                     
+                case "insertar":
+                          horario.setHorario(Integer.parseInt(request.getParameter("horario")));
+                          horario.setDiaSalida(request.getParameter("diaSalida"));
+                          horario.setDiaLlegada(request.getParameter("diaLlegada"));
+                          horario.setHoraSalida(request.getParameter("horaSalida"));
+                          horario.setHoraLlegada(request.getParameter("horaLlegada"));
+                          horario.setPrecio(Integer.parseInt(request.getParameter("precio")));
+                          horario.setRuta(Integer.parseInt(request.getParameter("ruta")));
+                          
+                          sh.insertarHorario(horario);
+
+                          out.print("C~El objeto fue ingresado correctamente");
+                          break;
+
+                case "actualizar":
+                        horario.setHorario(Integer.parseInt(request.getParameter("horario")));
+                        horario.setDiaSalida(request.getParameter("diaSalida"));
+                        horario.setDiaLlegada(request.getParameter("diaLlegada"));
+                        horario.setHoraSalida(request.getParameter("horaSalida"));
+                        horario.setHoraLlegada(request.getParameter("horaLlegada"));
+                        horario.setPrecio(Integer.parseInt(request.getParameter("precio")));
+                        horario.setRuta(Integer.parseInt(request.getParameter("ruta")));
+                          
+                        sh.actualizarHorario(horario);
+
+                        out.print("C~El objeto fue actualizado correctamente");
+                        break;
+
+                case "listar":
+
+                    List<Horario> listHora = new ArrayList(sh.listarHorarios());
+                    json = new Gson().toJson(listHora);   
+                    out.print(json);
+                    break;
+                    
+                case "buscar": 
+                    horario = sh.buscarHorario(Integer.parseInt(request.getParameter("horario")));
+                    
+                    //se pasa la informacion del objeto a formato JSON
+                    json = new Gson().toJson(horario);
+                    out.print(json);
+                    break;
+                                    
+                default:
+                    out.print("E~No se indicó la acción que se desea realizare");
+                    break;     
+            }
        
         } catch (Exception e) {
             out.print("E~" + e.getMessage());

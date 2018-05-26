@@ -18,12 +18,12 @@ public class Tiquete {
     private String usuario;
     private int vuelo;
     private int asiento;
-    private Date fechaCompra;
+    private String fechaCompra;
 
     public Tiquete() {
     }
 
-    public Tiquete(int tiquete, double precio, String usuario, int vuelo, int asiento, Date fechaCompra) {
+    public Tiquete(int tiquete, double precio, String usuario, int vuelo, int asiento, String fechaCompra) {
         this.tiquete = tiquete;
         this.precio = precio;
         this.usuario = usuario;
@@ -72,11 +72,11 @@ public class Tiquete {
         this.asiento = asiento;
     }
 
-    public Date getFechaCompra() {
+    public String getFechaCompra() {
         return fechaCompra;
     }
 
-    public void setFechaCompra(Date fechaCompra) {
+    public void setFechaCompra(String fechaCompra) {
         this.fechaCompra = fechaCompra;
     }
 

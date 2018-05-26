@@ -10,6 +10,8 @@ import cr.ac.una.escinf.proyectoaerolinea.data.service.ServicioLugar;
 import cr.ac.una.escinf.proyectoaerolinea.models.Lugar;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -50,12 +52,27 @@ public class LugarServlet extends HttpServlet {
             
             String accion = request.getParameter("accion");
             
-            switch (accion) {                     
+            switch (accion) {
+                case "insertar":
+                    lugar.setNombre(request.getParameter("nombre"));
+
+                    sl.insertarLugar(lugar);
+
+                    out.print("C~El objeto fue ingresado correctamente");
+                    break;
+                
                 case "buscar": 
                     lugar = sl.buscarLugar(request.getParameter("nombre"));
                     
                     //se pasa la informacion del objeto a formato JSON
                     json = new Gson().toJson(lugar);
+                    out.print(json);
+                    break;
+                    
+                case "listar":                
+                    List<Lugar> list = new ArrayList(sl.listarLugares());
+                    
+                    json = new Gson().toJson(list);                    
                     out.print(json);
                     break;
                     
