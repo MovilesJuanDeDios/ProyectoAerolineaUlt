@@ -5,8 +5,14 @@
  */
 package cr.ac.una.escinf.proyectoaerolinea.controller;
 
+import com.google.gson.Gson;
+import cr.ac.una.escinf.proyectoaerolinea.data.service.ServicioAsiento;
+import cr.ac.una.escinf.proyectoaerolinea.models.Asiento;
 import java.io.IOException;
 import java.io.PrintWriter;
+import static java.lang.Integer.parseInt;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -34,7 +40,48 @@ public class AsientoServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
- 
+            String json;
+           
+            //Se crea el objeto
+            Asiento asiento = new Asiento();
+                 
+            ServicioAsiento sa = new ServicioAsiento();
+            
+            Thread.sleep(1000);
+            
+            String accion = request.getParameter("accion");
+            
+            switch (accion) {                     
+                case "insertar":
+                    asiento.setAsiento(parseInt(request.getParameter("asiento")));                
+                    asiento.setEstado((request.getParameter("estado")).charAt(0));
+                    asiento.setNumero(request.getParameter("numero"));
+                    asiento.setVuelo(parseInt(request.getParameter("vuelo")));
+
+                    sa.insertarAsiento(asiento);
+
+                    out.print("C~El objeto fue ingresado correctamente");
+                    break;
+                                    
+                case "buscar": 
+                    asiento = sa.buscarAsiento(parseInt(request.getParameter("asiento")));
+                    
+                    //se pasa la informacion del objeto a formato JSON
+                    json = new Gson().toJson(asiento);
+                    out.print(json);
+                    break;
+                    
+                case "listar":                
+                    List<Asiento> list = new ArrayList(sa.listarAsientos());
+                    
+                    json = new Gson().toJson(list);                    
+                    out.print(json);
+                    break;
+                    
+                default:
+                    out.print("E~No se indicó la acción que se desea realizare");
+                    break;     
+            }
             
         } catch (Exception e) {
             out.print("E~" + e.getMessage());

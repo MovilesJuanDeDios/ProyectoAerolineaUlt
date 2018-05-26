@@ -38,7 +38,7 @@ public class ServicioTiquete extends Servicio {
             pstmt.setString(3, tiquete.getUsuario());
             pstmt.setInt(4, tiquete.getVuelo());
             pstmt.setInt(5, tiquete.getAsiento());
-            pstmt.setDate(6, (Date) tiquete.getFechaCompra());
+            pstmt.setString(6, tiquete.getFechaCompra());
 
             boolean resultado = pstmt.execute();
 
@@ -82,7 +82,7 @@ public class ServicioTiquete extends Servicio {
                         rs.getString("Usuario"),
                         rs.getInt("vuelo"),
                         rs.getInt("asiento"),
-                        rs.getDate("fecha_compra"));                    
+                        rs.getString("fecha_compra"));                    
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -124,7 +124,7 @@ public class ServicioTiquete extends Servicio {
                         rs.getString("Usuario"),
                         rs.getInt("vuelo"),
                         rs.getInt("asiento"),
-                        rs.getDate("fecha_compra"));  
+                        rs.getString("fecha_compra"));  
                 coleccion.add(tiquete);
             }
         } catch (SQLException e) {

@@ -5,8 +5,14 @@
  */
 package cr.ac.una.escinf.proyectoaerolinea.controller;
 
+import com.google.gson.Gson;
+import cr.ac.una.escinf.proyectoaerolinea.data.service.ServicioVuelo;
+import cr.ac.una.escinf.proyectoaerolinea.models.Vuelo;
 import java.io.IOException;
 import java.io.PrintWriter;
+import static java.lang.Integer.parseInt;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -35,6 +41,59 @@ public class VueloServlet extends HttpServlet {
         
         PrintWriter out = response.getWriter();
         try {
+            String json;
+           
+            //Se crea el objeto
+            Vuelo vuelo = new Vuelo();
+                 
+            ServicioVuelo sv = new ServicioVuelo();
+            
+            Thread.sleep(1000);
+            
+            String accion = request.getParameter("accion");
+            
+            switch (accion) {                     
+                case "insertar":
+                    vuelo.setVuelo(parseInt(request.getParameter("vuelo")));                
+                    vuelo.setAvion(parseInt(request.getParameter("avion")));
+                    vuelo.setRuta(parseInt(request.getParameter("ruta")));                
+                    vuelo.setHorario(parseInt(request.getParameter("horario")));
+
+                    sv.insertarVuelo(vuelo);
+
+                    out.print("C~El objeto fue ingresado correctamente");
+                    break;
+                    
+                case "actualizar":
+                    vuelo.setVuelo(parseInt(request.getParameter("vuelo")));                
+                    vuelo.setAvion(parseInt(request.getParameter("avion")));
+                    vuelo.setRuta(parseInt(request.getParameter("ruta")));                
+                    vuelo.setHorario(parseInt(request.getParameter("horario")));
+                    
+                    sv.actualizarVuelo(vuelo);
+
+                    out.print("C~El objeto fue actualizado correctamente");
+                    break;
+                    
+                case "buscar": 
+                    vuelo = sv.buscarVuelo(parseInt(request.getParameter("vuelo")));
+                    
+                    //se pasa la informacion del objeto a formato JSON
+                    json = new Gson().toJson(vuelo);
+                    out.print(json);
+                    break;
+                    
+                case "listar":                
+                    List<Vuelo> list = new ArrayList(sv.listarVuelos());
+                    
+                    json = new Gson().toJson(list);                    
+                    out.print(json);
+                    break;
+                    
+                default:
+                    out.print("E~No se indicó la acción que se desea realizare");
+                    break;     
+            }
            
         } catch (Exception e) {
             out.print("E~" + e.getMessage());

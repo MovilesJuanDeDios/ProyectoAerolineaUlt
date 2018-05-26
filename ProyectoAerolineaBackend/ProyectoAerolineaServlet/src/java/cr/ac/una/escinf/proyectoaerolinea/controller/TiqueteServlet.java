@@ -5,8 +5,14 @@
  */
 package cr.ac.una.escinf.proyectoaerolinea.controller;
 
+import com.google.gson.Gson;
+import cr.ac.una.escinf.proyectoaerolinea.data.service.ServicioTiquete;
+import cr.ac.una.escinf.proyectoaerolinea.models.Tiquete;
 import java.io.IOException;
 import java.io.PrintWriter;
+import static java.lang.Integer.parseInt;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -35,6 +41,50 @@ public class TiqueteServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         
         try {
+            String json;
+           
+            //Se crea el objeto
+            Tiquete tiquete = new Tiquete();
+                 
+            ServicioTiquete st = new ServicioTiquete();
+            
+            Thread.sleep(1000);
+            
+            String accion = request.getParameter("accion");
+            
+            switch (accion) {                     
+                case "insertar":
+                    tiquete.setTiquete(parseInt(request.getParameter("tiquete")));                
+                    tiquete.setAsiento(parseInt(request.getParameter("asiento")));
+                    tiquete.setFechaCompra(request.getParameter("fechaCompra"));
+                    tiquete.setPrecio(parseInt(request.getParameter("precio")));
+                    tiquete.setUsuario(request.getParameter("usuario"));
+                    tiquete.setVuelo(parseInt(request.getParameter("vuelo")));
+
+                    st.insertarTiquete(tiquete);
+
+                    out.print("C~El objeto fue ingresado correctamente");
+                    break;
+                                    
+                case "buscar": 
+                    tiquete = st.buscarTiquete(parseInt(request.getParameter("tiquete")));
+                    
+                    //se pasa la informacion del objeto a formato JSON
+                    json = new Gson().toJson(tiquete);
+                    out.print(json);
+                    break;
+                    
+                case "listar":                
+                    List<Tiquete> list = new ArrayList(st.listarTiquetes());
+                    
+                    json = new Gson().toJson(list);                    
+                    out.print(json);
+                    break;
+                    
+                default:
+                    out.print("E~No se indicó la acción que se desea realizare");
+                    break;     
+            }
        
         } catch (Exception e) {
             out.print("E~" + e.getMessage());
