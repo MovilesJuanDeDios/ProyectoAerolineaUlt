@@ -2,6 +2,7 @@ package cr.ac.una.escinf.proyectoaerolinea.fragments;
 
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.DialogFragment;
@@ -11,10 +12,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Spinner;
+import android.widget.TabHost;
 
 import java.text.DateFormat;
 import java.util.Calendar;
@@ -47,12 +50,23 @@ public class Tab1 extends Fragment implements DatePickerDialog.OnDateSetListener
     @BindView(R.id.fecha_vuelta_editText)
     EditText fecha_vuelta_et;
 
+    @BindView(R.id.next_tab1)
+    Button next;
+
     private Unbinder unbinder;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_tab1, container, false);
         unbinder = ButterKnife.bind(this, view);
+
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                TabHost host = (TabHost) getActivity().findViewById(android.R.id.tabhost);
+                host.setCurrentTab(1);
+            }
+        });
 
         fechaIda_et.setOnClickListener(new View.OnClickListener() {
             @Override

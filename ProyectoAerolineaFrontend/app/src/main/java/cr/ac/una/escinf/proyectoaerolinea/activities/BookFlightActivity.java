@@ -43,8 +43,10 @@ public class BookFlightActivity extends BaseActivity implements DatePickerDialog
         tabHost.addTab(tabHost.newTabSpec("tab3").setIndicator("Check Out"),
                 Tab3.class, null);
 
-        /*tabHost.getTabWidget().getChildTabViewAt(1).setEnabled(false);
-        tabHost.getTabWidget().getChildTabViewAt(2).setEnabled(false);*/
+        tabHost.getTabWidget().getChildTabViewAt(0).setEnabled(false);
+        tabHost.getTabWidget().getChildTabViewAt(1).setEnabled(false);
+        tabHost.getTabWidget().getChildTabViewAt(2).setEnabled(false);
+
 
 
 
