@@ -23,8 +23,9 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <ImageButton
-                    android:id="@+id/estrella1"
+                <Button
+                    android:id="@+id/cabina"
+                    android:text="Cabina del avion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:tint="@color/colorPrimaryDark"
@@ -57,7 +58,7 @@
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
-                        android:tint="@color/red"
+                        android:tint="@color/green"
                         app:srcCompat="@drawable/ic_seat"
                         tools:ignore="VectorDrawableCompat" />" />
 
@@ -68,7 +69,7 @@
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
                         android:layout_below="@+id/seat1"
-                        android:tint="@color/red"
+                        android:tint="@color/green"
                         app:srcCompat="@drawable/ic_seat"
                         tools:ignore="VectorDrawableCompat" />
 
@@ -79,7 +80,7 @@
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
                         android:layout_below="@+id/seat2"
-                        android:tint="@color/red"
+                        android:tint="@color/green"
                         app:srcCompat="@drawable/ic_seat"
                         tools:ignore="VectorDrawableCompat" />
 
@@ -88,7 +89,7 @@
                         android:layout_width="55dp"
                         android:layout_height="55dp"
                         android:layout_below="@+id/seat3"
-                        android:tint="@color/red"
+                        android:tint="@color/green"
                         app:srcCompat="@drawable/ic_seat"
                         tools:ignore="VectorDrawableCompat" />
 
@@ -97,7 +98,7 @@
                         android:layout_width="55dp"
                         android:layout_height="55dp"
                         android:layout_below="@+id/seat4"
-                        android:tint="@color/red"
+                        android:tint="@color/green"
                         app:srcCompat="@drawable/ic_seat"
                         tools:ignore="VectorDrawableCompat" />
 
@@ -106,7 +107,7 @@
                         android:layout_width="55dp"
                         android:layout_height="55dp"
                         android:layout_below="@+id/seat5"
-                        android:tint="@color/red"
+                        android:tint="@color/green"
                         app:srcCompat="@drawable/ic_seat"
                         tools:ignore="VectorDrawableCompat" />
 
@@ -115,7 +116,7 @@
                         android:layout_width="55dp"
                         android:layout_height="55dp"
                         android:layout_below="@+id/seat6"
-                        android:tint="@color/red"
+                        android:tint="@color/green"
                         app:srcCompat="@drawable/ic_seat"
                         tools:ignore="VectorDrawableCompat" />
 
@@ -124,7 +125,7 @@
                         android:layout_width="55dp"
                         android:layout_height="55dp"
                         android:layout_below="@+id/seat7"
-                        android:tint="@color/red"
+                        android:tint="@color/green"
                         app:srcCompat="@drawable/ic_seat"
                         tools:ignore="VectorDrawableCompat" />
 
@@ -133,7 +134,7 @@
                         android:layout_width="55dp"
                         android:layout_height="55dp"
                         android:layout_below="@+id/seat8"
-                        android:tint="@color/red"
+                        android:tint="@color/green"
                         app:srcCompat="@drawable/ic_seat"
                         tools:ignore="VectorDrawableCompat" />
 
@@ -144,7 +145,7 @@
                         android:layout_above="@+id/seat2"
                         android:layout_toEndOf="@+id/seat1"
                         android:layout_toRightOf="@+id/seat1"
-                        android:tint="@color/red"
+                        android:tint="@color/green"
                         app:srcCompat="@drawable/ic_seat"
                         tools:ignore="VectorDrawableCompat" />
 
@@ -155,7 +156,7 @@
                         android:layout_above="@+id/seat3"
                         android:layout_toEndOf="@+id/seat2"
                         android:layout_toRightOf="@+id/seat2"
-                        android:tint="@color/red"
+                        android:tint="@color/green"
                         app:srcCompat="@drawable/ic_seat"
                         tools:ignore="VectorDrawableCompat" />
 
@@ -166,7 +167,7 @@
                         android:layout_above="@+id/seat4"
                         android:layout_toEndOf="@+id/seat3"
                         android:layout_toRightOf="@+id/seat3"
-                        android:tint="@color/red"
+                        android:tint="@color/green"
                         app:srcCompat="@drawable/ic_seat"
                         tools:ignore="VectorDrawableCompat" />
 
@@ -177,7 +178,7 @@
                         android:layout_above="@+id/seat5"
                         android:layout_toEndOf="@+id/seat4"
                         android:layout_toRightOf="@+id/seat4"
-                        android:tint="@color/red"
+                        android:tint="@color/green"
                         app:srcCompat="@drawable/ic_seat"
                         tools:ignore="VectorDrawableCompat" />
 
@@ -188,7 +189,7 @@
                         android:layout_above="@+id/seat6"
                         android:layout_toEndOf="@+id/seat5"
                         android:layout_toRightOf="@+id/seat5"
-                        android:tint="@color/red"
+                        android:tint="@color/green"
                         app:srcCompat="@drawable/ic_seat"
                         tools:ignore="VectorDrawableCompat" />
 
@@ -199,7 +200,7 @@
                         android:layout_above="@+id/seat7"
                         android:layout_toEndOf="@+id/seat6"
                         android:layout_toRightOf="@+id/seat6"
-                        android:tint="@color/red"
+                        android:tint="@color/green"
                         app:srcCompat="@drawable/ic_seat"
                         tools:ignore="VectorDrawableCompat" />
 
@@ -210,7 +211,7 @@
                         android:layout_below="@+id/seat15"
                         android:layout_toEndOf="@+id/seat6"
                         android:layout_toRightOf="@+id/seat6"
-                        android:tint="@color/red"
+                        android:tint="@color/green"
                         app:srcCompat="@drawable/ic_seat"
                         tools:ignore="VectorDrawableCompat" />
 
@@ -221,7 +222,7 @@
                         android:layout_above="@+id/seat9"
                         android:layout_toEndOf="@+id/seat8"
                         android:layout_toRightOf="@+id/seat8"
-                        android:tint="@color/red"
+                        android:tint="@color/green"
                         app:srcCompat="@drawable/ic_seat"
                         tools:ignore="VectorDrawableCompat" />
 
@@ -232,7 +233,7 @@
                         android:layout_alignBottom="@+id/seat9"
                         android:layout_toEndOf="@+id/seat9"
                         android:layout_toRightOf="@+id/seat9"
-                        android:tint="@color/red"
+                        android:tint="@color/green"
                         app:srcCompat="@drawable/ic_seat"
                         tools:ignore="VectorDrawableCompat" />
 
@@ -452,7 +453,7 @@
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
                         android:layout_below="@+id/seat9"
-                        android:tint="@color/red"
+                        android:tint="@color/green"
                         app:srcCompat="@drawable/ic_seat"
                         tools:ignore="VectorDrawableCompat" />
 
@@ -463,7 +464,7 @@
                         android:layout_below="@+id/seat9"
                         android:layout_toEndOf="@+id/seat29"
                         android:layout_toRightOf="@+id/seat29"
-                        android:tint="@color/red"
+                        android:tint="@color/green"
                         app:srcCompat="@drawable/ic_seat"
                         tools:ignore="VectorDrawableCompat" />
 
@@ -598,6 +599,20 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/baños"
+                    android:text="baños del avion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tint="@color/colorPrimaryDark"
+                    app:srcCompat="@android:drawable/btn_star" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
